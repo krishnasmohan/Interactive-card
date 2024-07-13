@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <div class="main-container">
+            <div class="container">
+                <div class="left-container">
+                    <div class="card-front">
+                        <div class="card-front-design">
+                            <div class="card-front-round1"></div>
+                            <div class="card-front-round2"></div>
+                        </div>
+                        <div class="card-front-content">
+                            <p class="card-front-number">0000 0000 0000 0000</p>
+                            <div class="card-front-details">
+                                <p class="frontcard-caption">JANE APPLESEED</p>
+                                <p class="cardfront-date">00</p><span class="front-span">/</span><span class="yearSpan">00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <p class="card-back-numb">000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-container">
+                    <div class="right-content">
+                        <form id="form" class="label-container">
+                            <label for="name">CARDHOLDER NAME</label>
+                            <input onkeyup="cardNameUpdate()" id="name" type="text" placeholder="e.g. Jane Appleseed" >
+                            <span id="name-error" class="warning"></span>
+                            <label for="number">CARD NUMBER</label>
+                            <input onkeyup="cardNumberUpdate()" id="number" type="text" placeholder="e.g. 1234 5678 9123 0000" >
+                            <span id="number-error" class="warning"></span>
+                            <div class="date-container">
+                               <div>
+                                    <label for="month" id="expiry-date">EXPY</label>
+                                    <input onkeyup="cardMonthUpdate()" id="month" type="text" class="month-input" placeholder="MM" >
+                                </div> 
+                                <div>
+                                    <label for="year" id="expiry-date"> (MM/YY)</label>
+                                    <input id="year" onkeyup="cardYearUpdate()" type="text" class="year-input" placeholder="YY" >
+                                </div>
+                                <div class="cvc-container">
+                                    <label for="cvc" id="cyc-label">CYC</label>
+                                    <input id="cvc" type="text" placeholder="e.g. 123" onkeyup="cardCvc()">
+                                    <span id="cvc-error" class="warning"></span>
+                                </div>
+                            </div>
+                            <span id="month-error" class="warning"></span>
+                          <input type="submit" value="Confirm" class="confirm-button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
